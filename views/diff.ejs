@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JSON-Patch Apply / Generate Diff App</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  </head>
+  <body>
+
+  <style type="text/css" media="all">
+  <% include assets/stylesheets/screen.css %>
+  </style>
+
+  <section id="body" class="enyo-fit enyo-clip">
+    <h1><a href="/">JSON-Patch</a><br />Generate a Diff</h1>
+    <section class="enyo-panels enyo-arranger enyo-arranger-fit enyo-panels-fit-narrow" id="main">
+      <div style="transform: translateZ(0px); opacity: 1;" id="form-fields">
+        <form action="/diff" method="post">
+          <div class="label" id="form-fields_orgJsonLabel">Original JSON <% if (example) { %>- <span id="warn">Replace example with your original JSON object</span><% } %></div>
+          <textarea class="enyo-input input" id="form-fields_orgJson" name="orgJson" placeholder="Original JSON" rows="12"><%= orgJson %></textarea>
+          <div class="label" id="form-fields_modJsonLabel">Modified JSON
+            <% if (example) { %>- <span id="warn">Replace example with your modified JSON object</span><% } %>
+            <% if (applied) { %>- <span id="valid">Your patched JSON object</span><% } %>
+          </div>
+          <textarea class="enyo-input input" id="form-fields_modJson" name="modJson" placeholder="Modified JSON" rows="12"><%= modJson %></textarea>
+          <input class="enyo-tool-decorator onyx-button enyo-unselectable button" name="submit" id="form-fields_generateButton" type="submit" value="Generate JSON-Patch"/>
+        </form>
+      </div>
+    </section>
+  </section>
+  </body>
+</html>

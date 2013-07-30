@@ -1,0 +1,30 @@
+{
+  "name": "json-patch-app",
+  "version": "0.1.0",
+  "description": "JSON-Patch App.",
+  "keywords": ["json", "patch", "json-patch", "diff"],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/xtuple/json-patch-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xtuple/json-patch-app/issues"
+  },
+  "author": {
+    "name": "bendiy",
+    "email": "ben@xtuple.com",
+    "url": "http://www.xtuple.com/"
+  },
+  "licenses": [ {
+    "type": "MIT",
+    "url": "http://www.opensource.org/licenses/MIT"
+  } ],
+  "main": "./app.js",
+  "dependencies": {
+    "pkginfo": "0.2.x",
+    "ejs": "0.8.x",
+    "express": "3.1.x",
+    "json-patch": "git://github.com/xtuple/JSON-Patch.git"
+  },
+  "engines": { "node": ">= 0.8.0" }
+}
